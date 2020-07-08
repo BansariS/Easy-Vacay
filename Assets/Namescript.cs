@@ -9,7 +9,6 @@ public class Namescript : MonoBehaviour
      public void OnClicked(Button button)
     {
         dayname = button.name;
-
     }
      public static string titleStringName()
     {

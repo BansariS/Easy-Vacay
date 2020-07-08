@@ -8,7 +8,6 @@ public class AddName : MonoBehaviour
     public static HashSet<string> listnames = new HashSet<string>();
     public void buttonOnClick()
     {
-        Debug.Log("This button was clicked");
         listnames.Add(EventSystem.current.currentSelectedGameObject.name);     
     }
     

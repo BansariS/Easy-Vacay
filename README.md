@@ -11,4 +11,4 @@ Easy-Vacay/Assets/AddName.cs - It is used to add names of the destinations which
 
 Easy-Vacay/Assets/Scripts/LoadScene.cs - This script is edited to retain the value of different destinations in a hashset even if the scenes changes and display them together in the last scene with their respective descriptions. It also shows the count of the selected destinations. 
 
-Easy-Vacay/Assets/Scripts/SendEmail.cs - It is used to send the list of the selected destinations to the user's registered email Id so that it can be useful while planning the trips.
+Easy-Vacay/Assets/Scripts/SendEmail.cs - It is used to send the list of the selected destinations to the user's registered email Id so that it can be useful while planning the trips. (Developed by my project partner Shreya Patil)

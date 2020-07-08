@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Start.unity
+    guid: 6ece2e65a3d344219b75a52b38bb3441
+  - enabled: 1
+    path: Assets/Scenes/Videos/GoldenGate.unity
+    guid: 5fbfe3bac9fdf4c5482548b7e75b61a9
+  - enabled: 1
+    path: Assets/Scenes/Videos/LADay1.unity
+    guid: 8d8d00c4354e6470eb4f5c3a1565d897
+  - enabled: 1
+    path: Assets/Scenes/SELECT_DAYS.unity
+    guid: da427b5f65d344f47afadf0478250e31
+  - enabled: 1
+    path: Assets/ExitScreen.unity
+    guid: 1eebb1aa60e164eb98d19da89dae1115
+  - enabled: 1
+    path: Assets/Scenes/Videos/SFDay2.unity
+    guid: d8eec1f6234694c77852a513d102588b
+  - enabled: 1
+    path: Assets/Scenes/Videos/Monterey.unity
+    guid: e3bfb2a72a370412cb846a3cea7f620d
+  - enabled: 1
+    path: Assets/Scenes/Videos/Scuba.unity
+    guid: e1be1c2838ae94818b5908ffeac31c28
+  - enabled: 1
+    path: Assets/Scenes/Videos/17Mile.unity
+    guid: 54eeb9dea1de74cb3bd0e34bed15b47e
+  - enabled: 1
+    path: Assets/Scenes/Videos/Skydive.unity
+    guid: 473387fc3184a41e5a32ae6801170d3a
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 0}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 1f91aa5a6c94045e0a12fce834a5da32,
+      type: 2}

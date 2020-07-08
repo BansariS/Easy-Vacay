@@ -11,22 +11,10 @@ using System.IO;
 
 public class SendEmail : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+ 
     public void sendEmail()
     {
 
-        Debug.Log("This UPDATE button was clicked");
         string output = "";
 
         List<string> fnames = new List<string>();
@@ -40,7 +28,6 @@ public class SendEmail : MonoBehaviour
         {
             output = output + value + "\n";
         }
-        Debug.Log("output-->" + output);
 
         //send emal
         configureEmail(output);
@@ -49,9 +36,7 @@ public class SendEmail : MonoBehaviour
         byte[] bytes = Encoding.ASCII.GetBytes(output);
 
         string path = "./360render.txt";
-        Debug.Log(path);
         File.WriteAllBytes(path, bytes);
-        Debug.Log("360 render saved to " + path);
 
     }
 
@@ -59,20 +44,19 @@ public class SendEmail : MonoBehaviour
     {
         MailMessage mail = new MailMessage();
 
-        mail.From = new MailAddress("rao.shreya502@gmail.com");
-        mail.To.Add("shreya.patil502@gmail.com");
+        mail.From = new MailAddress("reh.sh502@gmail.com");
+        mail.To.Add("abc.xyz@gmail.com");
         mail.Subject = "Your shortlisted travel destinations from Easy Vacay";
         mail.Body = body;
 
         SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
         smtpServer.Port = 587;
-        smtpServer.Credentials = new System.Net.NetworkCredential("rao.shreya502@gmail.com", "Shoppingshopping@502") as ICredentialsByHost;
+        smtpServer.Credentials = new System.Net.NetworkCredential("abc.xyz@gmail.com", "pingshoping@52") as ICredentialsByHost;
         smtpServer.EnableSsl = true;
         ServicePointManager.ServerCertificateValidationCallback =
             delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
             { return true; };
         smtpServer.Send(mail);
-        Debug.Log("success");
 
     }
 }

@@ -24,28 +24,20 @@ public class LoadScene : MonoBehaviour
     }
      public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-
-        Debug.Log("OnSceneLoaded: " + scene.name);
-        Debug.Log("SceneMode" + mode);
-        // int datalogCounter = new int();
-        // datalogCounter = 1;
         if (scene.name == "SELECT_DAYS")
         {
             string titlename;
             int notificationcount;
             titlename = Namescript.titleStringName();
-            Debug.Log("titlename is " + titlename);
 
             GameObject Expandedworldgameobject = GameObject.FindGameObjectWithTag("expand");
-            Debug.Log("Expandedworldgameobject obj name is" + Expandedworldgameobject.name);
-
+            
             obj = Expandedworldgameobject.GetComponentsInChildren<Transform>(true);
             List<GameObject> datalogsname = new List<GameObject>();
             List<GameObject> descriptions = new List<GameObject>();
 
             List<string> fnames = new List<string>();
             fnames = AddName.ListStrings();
-            Debug.Log("fnames count" + fnames.Count);
             notificationcount =fnames.Count; 
              
 
@@ -53,18 +45,14 @@ public class LoadScene : MonoBehaviour
             {
                 if (ob.gameObject.tag == "datalogtitle")
                 {
-                    Debug.Log("Expanded  world child objects one:" + ob.name);
                     tnames = ob.GetComponent<TextMeshProUGUI>();
                     tnames.text = titlename;
                 }
 
                 if (ob.gameObject.tag == "notification")
                 {
-                    Debug.Log("Expanded  world child objects one:" + ob.name);
                     tnames = ob.GetComponent<TextMeshProUGUI>();
-                    Debug.Log("Enotificationcount is " + notificationcount.ToString());
                     notification = notificationcount.ToString();
-                    Debug.Log("count is " + notification);
                     tnames.text = notification;
                     
                 }
@@ -80,8 +68,7 @@ public class LoadScene : MonoBehaviour
                     descriptions.Add(ob.transform.gameObject);
                 }
             }
-            Debug.Log("datalogsname count is " + datalogsname.Count);
-             Debug.Log("description count is " + descriptions.Count);
+           
 
             for (int i = 0; i < fnames.Count; i++)
             {
